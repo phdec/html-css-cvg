@@ -1,0 +1,1 @@
+const botaoTema = document.getElementById('botao-tema');
