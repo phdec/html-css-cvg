@@ -1,6 +1,9 @@
 :root {
     --cor-primaria: #333;
     --cor-secundaria: #535353;
+    --cor-fundo: #f0f0f0;
+    --cor-um: #fff;
+    --cor-dois: #000;
 }
 
 * {
@@ -11,12 +14,21 @@
 body {
     display: grid;
     grid-template-rows: auto 1fr;
-    background-color: #f0f0f0;
+    background-color: var(--cor-fundo);
+    transition: background-color 0.3s;
+}
+body.escuro {
+    --cor-um: #141414;
+    --cor-fundo: #181818;
+    --cor-dois: #fff;
+    --cor-primaria: #ffffff;   
+    --cor-secundaria: #eeeeee; 
 }
 header {
     background-color: var(--cor-primaria);
     padding: 5px 13px;
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
 }
 header > nav > ul {
     display: flex;
@@ -26,7 +38,7 @@ header > nav > ul {
 }
 header > nav > ul > li > a {
     display: flex;
-    color: white;
+    color: var(--cor-um);
     text-decoration: none;
     padding: 12px 14px;
     border-radius: 10px;
@@ -37,7 +49,8 @@ header > nav > ul > li > a:hover {
 }
 main > section {
     padding: 20px;
-    background-color: white;
+    background-color: var(--cor-um);
+    transition: background-color 0.3s;
     border-radius: 15px;
     margin: 20px;
     display: flex;
@@ -49,7 +62,7 @@ main > section > img {
     width: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid white;
+    border: 4px solid var(--cor-um);
     outline: 4px solid var(--cor-primaria);
     align-self: center;
 }
@@ -58,13 +71,16 @@ main > section div.text {
     flex-flow: column nowrap;
     justify-content: flex-start;
     gap: 10px;
+    color: var(--cor-dois);
 }
 main > section h1 {
     font-family: monospace;
     font-size: 1.8rem;
+    color: var(--cor-dois);
 }
 main > section p {
     font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--cor-dois);
 }
 main > section > div.links {
     display: flex;
@@ -73,7 +89,7 @@ main > section > div.links {
 }
 main > section > div.links > a {
     font-size: 1.5rem;
-    color: black;
+    color: var(--cor-dois);
 }
 main > section > div.links > a:hover {
     color: var(--cor-secundaria);
