@@ -42,10 +42,10 @@ header > nav > ul > li > a {
     text-decoration: none;
     padding: 12px 14px;
     border-radius: 10px;
+    transition: background-color 0.2s;
 }
 header > nav > ul > li > a:hover {
     background-color: var(--cor-secundaria);
-    transition: background-color 0.2s;
 }
 main > section {
     padding: 20px;
@@ -107,11 +107,11 @@ main > section > div.skill {
     border-radius: 10px;
     border-left: 5px solid var(--cor-primaria);
     transition: background-color 0.3s;
+    transition: border 0.3s;
 }
 
 main > section > div.skill:hover {
     border-left: 10px solid var(--cor-secundaria);
-    transition: border 0.3s;
     cursor: default;
 }
 
@@ -127,11 +127,11 @@ main > section > div.formacao {
     border-radius: 10px;
     transition: background-color 0.3s;
     border-left: 5px solid var(--cor-primaria);
+    transition: border 0.3s;
 }
 
 main > section > div.formacao:hover {
     border-left: 10px solid var(--cor-secundaria);
-    transition: border 0.3s;
     cursor: default;
 }
 
@@ -153,11 +153,11 @@ main > section > div.projeto {
     border-radius: 10px;
     border-left: 5px solid var(--cor-primaria);
     transition: background-color 0.3s;
+    transition: border 0.3s;
 }
 
 main > section > div.projeto:hover {
     border-left: 10px solid var(--cor-secundaria);
-    transition: border 0.3s;
     cursor: default;
 }
 
