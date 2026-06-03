@@ -1,7 +1,7 @@
 const botaoTema = document.getElementById('botao-tema')
 const body = document.body
-
 const temaNormal = localStorage.getItem('tema')
+
 tema(temaNormal === 'escuro')
 
 function tema(temaAtual){
