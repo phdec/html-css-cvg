@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio ph</title>
-    <script src="https://kit.fontawesome.com/412e60f1e0.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b7eb7e2783.js" crossorigin="anonymous"></script>
     <script src="js/script.js"defer></script>
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <link rel="stylesheet" href="estilos/style.css">
@@ -22,48 +22,83 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section id="perfil">
             <img src="imagens/foto braço 'quebrado'.jpg" alt="Foto do perfil">
             <div class="text">
                 <h1>Pedro Lunedo</h1>
-                <p>Estudante de desenvolvimento web, com especialização em HTML, CSS e JavaScript.</p>
+                <p> Aluno do curso de HTML5 e CSS3 do <a href="https://www.cursoemvideo.com" target="_blank" rel="nofollow">Curso em Vídeo</a>, lecionado pelo professor Gustavo Guanabara. Estudante de desenvolvimento web, com especialização em HTML, CSS e JavaScript.</p>
             </div>
             <div class="links">
-                <a href="https://github.com/phdec" target="_blank"><i class="fa fa-github" alt="Github Logo" title="Github"></i></a>
-                <a href="https://www.linkedin.com/in/pedro-lunedo-0b0b0b/" target="_blank"><i class="fa fa-linkedin" alt="LinkedIn Logo" title="LinkedIn"></i></a>
-                <a href="https://www.instagram.com/alunedoph/" target="_blank"><i class="fa fa-instagram" alt="Instagram Logo" title="Instagram"></i></a>
+                <a href="https://github.com/phdec" target="_blank" rel="nofollow"><i class="fa fa-github" alt="Github Logo" title="Github"></i></a>
+                <a href="https://www.linkedin.com/in/pedro-lunedo-0b0b0b/" target="_blank" rel="nofollow"><i class="fa fa-linkedin" alt="LinkedIn Logo" title="LinkedIn"></i></a>
+                <a href="https://www.instagram.com/alunedoph/" target="_blank" rel="nofollow"><i class="fa fa-instagram" alt="Instagram Logo" title="Instagram"></i></a>
             </div>
         </section>
-        <section>
+        <section id="skills">
             <h1><i class="fa fa-code" alt="Skills Logo" title="Skills"></i>Skills</h1>
             <div class="skill">
-                <h2>HTML</h2>
+                <div class="info-skill">
+                    <h2><i class="fa-brands fa-html5"></i> HTML</h2>
+                    <h2>85%</h2>
+                </div>
+                <meter id="bat" min="0" max="100" value="85">85%</meter>
             </div>
             <div class="skill">
-                <h2>CSS</h2>
+                <div class="info-skill">
+                    <h2><i class="fa-brands fa-css3-alt"></i> CSS</h2>
+                    <h2>75%</h2>
+                </div>
+                <meter id="bat" min="0" max="100" value="75">75%</meter>
             </div>
             <div class="skill">
-                <h2>JavaScript</h2>
+                <div class="info-skill">
+                    <h2><i class="fa-brands fa-js"></i> JavaScript</h2>
+                    <h2>60%</h2>
+                </div>
+                <meter id="bat" min="0" max="100" value="60">60%</meter>
             </div>
         </section>
-        <section>
+        <section id="formacoes">
             <h1><i class="fa fa-graduation-cap" alt="Formações Logo" title="Formações"></i>Formações</h1>
             <div class="formacao">
                 <h3 class="data">2025-2027</h3>
-                <h2>Curso Técnico em DS integrado ao EM Senai</h2>
+                <h2>Curso Técnico em DS integrado ao EM</h2>
+                <h3>Escola Sesi Senai Tijucas, SC.</h3>
             </div>
         </section>
         <section class="projetos">
             <h1><i class="fa fa-briefcase" alt="Projetos Logo" title="Projetos"></i>Projetos</h1>
-            <div class="projeto">
-                <a href="https://phdec.github.io/html-css-cvg/projeto%20login/" target="_blank" class="imagem"><img src="imagens/projeto-login.png" alt="Imagem Projeto Login"></a>
-                <h3 class="data">2025</h3>
-                <h2>Projeto Login</h2>
-                <p>Projeto de uma tela de login flexível (ainda sem flexbox) sem back-end.</p>
-                <details class="descricao">
-                    <summary>Saiba mais...</summary>
-                    <p>Criar uma tela de login é algo muito comum na vida de quem vai construir sites. Afinal, diversos tipos de usuários precisam acessar os sites de maneira segura e eficiente. Mas essa tela de login deve conter componentes bonitos e com funcionalidades bem definidas e intuitivas de usar. Essa tela de login vai adaptando seus conteúdos para funcionar em qualquer tamanho de tela.</p>
-                </details>
+            <div id="projetos-container">
+                <div class="projeto">
+                    <a href="https://phdec.github.io/html-css-cvg/projeto%20fundo/" target="_blank" class="imagem"><img src="imagens/projeto-fundo.png" alt="Imagem Projeto Fundo"></a>
+                    <h3 class="data">2025</h3>
+                    <h2>Projeto Fundo</h2>
+                    <p>Projeto feito para treinar efeito paralax em imagens.</p>
+                    <details class="descricao">
+                        <summary>Saiba mais...</summary>
+                        <p>Apresentar um conteúdo na tela de forma criativa é sempre um desafio aos desenvolvedores de sites. Nesse projeto, apresento uma rolagem de maneira bem-humorada, responsiva e usando técnicas como parallax para exibição de imagens de fundo.</p>
+                    </details>
+                </div>
+                <div class="projeto">
+                    <a href="https://phdec.github.io/html-css-cvg/projeto%20iframe/" target="_blank" class="imagem"><img src="imagens/projeto-iframe.png" alt="Imagem Projeto Iframe"></a>
+                    <h3 class="data">2025</h3>
+                    <h2>Projeto Iframe</h2>
+                    <p>Projeto feito para treinar uso de iframes.</p>
+                    <details class="descricao">
+                        <summary>Saiba mais...</summary>
+                        <p>Um meta projeto muito interessante deixa o visitante interagir com um aparelho de smartphone que tem seu conteúdo carregado a cada vez que você clica em um ícone de redes sociais. Interatividade e responsividade para um projeto bem elaborado e que utiliza iframes na sua estrutura principal.</p>
+                    </details>
+                </div>
+                <div class="projeto">
+                    <a href="https://phdec.github.io/html-css-cvg/projeto%20login/" target="_blank" class="imagem"><img src="imagens/projeto-login.png" alt="Imagem Projeto Login"></a>
+                    <h3 class="data">2026</h3>
+                    <h2>Projeto Login</h2>
+                    <p>Projeto de uma tela de login flexível (ainda sem flexbox) sem back-end.</p>
+                    <details class="descricao">
+                        <summary>Saiba mais...</summary>
+                        <p>Criar uma tela de login é algo muito comum na vida de quem vai construir sites. Afinal, diversos tipos de usuários precisam acessar os sites de maneira segura e eficiente. Mas essa tela de login deve conter componentes bonitos e com funcionalidades bem definidas e intuitivas de usar. Essa tela de login vai adaptando seus conteúdos para funcionar em qualquer tamanho de tela, utilizando media-queries.</p>
+                    </details>
+                </div>
             </div>
         </section>
     </main>

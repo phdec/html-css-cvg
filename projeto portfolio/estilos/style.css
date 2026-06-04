@@ -12,8 +12,6 @@
     box-sizing: border-box;
 }
 body {
-    display: grid;
-    grid-template-rows: auto 1fr;
     background-color: var(--cor-fundo);
     transition: background-color 0.3s;
 }
@@ -48,20 +46,32 @@ header > nav > ul > li > a:hover {
     background-color: var(--cor-secundaria);
 }
 
+main {
+    display: grid;
+    grid-template-columns: 1fr 90vw 1fr;
+}
+
 main > section {
     padding: 20px;
     background-color: var(--cor-um);
     transition: background-color 0.3s;
     border-radius: 15px;
-    margin: 20px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
+main > section#perfil {
+    grid-column: 2;
+}
+
 main > section > img {
-    height: 200px;
-    width: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    aspect-ratio: 1/1;
     object-fit: cover;
+    overflow: hidden;
     border-radius: 50%;
     border: 4px solid var(--cor-um);
     outline: 4px solid var(--cor-primaria);
@@ -74,6 +84,15 @@ main > section div.text {
     gap: 10px;
     color: var(--cor-dois);
 }
+
+main > section#perfil > div.text > p > a {
+    text-decoration: none;
+}
+
+main > section#perfil > div.text > p > a:hover {
+    text-decoration: underline;
+}
+
 main > section h1 {
     font-family: monospace;
     font-size: 1.8rem;
@@ -86,7 +105,7 @@ main > section p {
 main > section > div.links {
     display: flex;
     gap: 10px;
-    align-self: center;;
+    align-self: center;
 }
 main > section > div.links > a {
     font-size: 1.5rem;
@@ -97,74 +116,114 @@ main > section > div.links > a:hover {
     color: var(--cor-secundaria);
 }
 
-main > section > h1 > i {
-    margin-right: 10px;
-    font-size: 1.5rem;
-}
-
 main > section > div.skill {
     background-color: var(--cor-fundo);
     padding: 15px;
     border-radius: 10px;
-    border-left: 5px solid var(--cor-primaria);
+    border-left: 5px solid var(--cor-secundaria);
     transition: background-color 0.3s;
     transition: border 0.3s;
 }
 
-main > section > div.skill:hover {
-    border-left: 10px solid var(--cor-secundaria);
+main > section#skills > div.skill:hover {
+    border-left: 10px solid var(--cor-primaria);
     cursor: default;
 }
 
-main > section > div.skill > h2 {
+main > section#skills {
+    grid-column: 2;
+}
+
+main > section#skills > div.skill > div.info-skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main > section#skills > div.skill > div.info-skill > h2 {
     font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--cor-dois);
     font-size: 1.3rem;
 }
 
-main > section > div.formacao {
+main > section#skills > div.skill > meter {
+    width: 100%;
+    height: 17px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: var(--cor-fundo);
+}
+
+main > section#skills > div.skill > meter::-webkit-meter-bar {
+    border-radius: 6px;
+}
+
+main > section#skills > div.skill > meter::-webkit-meter-optimum-value {
+    background: var(--cor-primaria);
+    appearance: none;
+    border-radius: 6px;
+}
+
+main > section#formacoes {
+    grid-column: 2;
+}
+
+main > section#formacoes > div.formacao {
     background-color: var(--cor-fundo);
     padding: 15px;
     border-radius: 10px;
     transition: background-color 0.3s;
-    border-left: 5px solid var(--cor-primaria);
+    border-left: 5px solid var(--cor-secundaria);
     transition: border 0.3s;
 }
 
-main > section > div.formacao:hover {
-    border-left: 10px solid var(--cor-secundaria);
+main > section#formacoes > div.formacao:hover {
+    border-left: 10px solid var(--cor-primaria);
     cursor: default;
 }
 
-main > section h3.data {
+main > section h3 {
     font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--cor-dois);
     font-weight: bold;
     font-size: 1rem;
 }
 
-main > section > div.formacao > h2 {
+main > section#formacoes > div.formacao > h2 {
     font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--cor-dois);
     font-size: 1.3rem;
 }
 
-main > section.projetos > .projeto {
+main > section.projetos {
+    grid-column: 2;
+    margin-bottom: 20px;
+}
+
+main > section.projetos > div#projetos-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+
+main > section.projetos > div#projetos-container > .projeto {
     background-color: var(--cor-fundo);
     padding: 15px;
     border-radius: 10px;
-    border-left: 5px solid var(--cor-primaria);
+    border-left: 5px solid var(--cor-secundaria);
     transition: background-color 0.3s;
     transition: all 0.3s;
 }
 
-main > section.projetos > .projeto:hover {
-    border-left: 10px solid var(--cor-secundaria);
+main > section.projetos > div#projetos-container > .projeto:hover {
+    box-sizing: border-box;
+    border-left: 10px solid var(--cor-primaria);
     transform: translateY(2px) scale(0.99);
     cursor: default;
 }
 
-main > section.projetos > .projeto > h2 {
+main > section.projetos > div#projetos-container > .projeto > h2 {
     font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--cor-dois);
     font-size: 1.3rem;
@@ -174,19 +233,20 @@ main > section.projetos > a {
     text-decoration: none;
 }
 
-main > section.projetos > .projeto img {
+main > section.projetos > div#projetos-container > .projeto img {
     width: 100%;
-    height: clamp(150px, 40vw, 80vh);
+    height: clamp(40vw, 40vw, 100vh);
     object-fit: cover;
     border-radius: 5px;
 }
-main > section.projetos > .projeto > details.descricao {
+
+main > section.projetos > div#projetos-container > .projeto > details.descricao {
     color: var(--cor-dois);
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 5px 5px 0px 5px;
 }
 
-main > section.projetos > .projeto > details.descricao > p {
+main > section.projetos > div#projetos-container > .projeto > details.descricao > p {
     font-size: 0.9rem;
     text-align: justify;
 }
