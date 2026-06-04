@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 :root {
     --cor-primaria: #333;
     --cor-secundaria: #535353;
@@ -101,10 +103,12 @@ main > section h1 {
     font-family: monospace;
     font-size: 1.8rem;
     color: var(--cor-dois);
+    font-size: clamp(1.8rem, 2rem, 2rem);
 }
 main > section p {
-    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Inter';
     color: var(--cor-dois);
+    font-size: clamp(0.8rem, 1rem, 1rem)
 }
 main > section > div.links {
     display: flex;
